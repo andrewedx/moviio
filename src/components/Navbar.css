@@ -1,0 +1,73 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  background-color: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1f2530, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #212d47, -5px -5px 7px #212d47;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f9d3b4;
+  font-family: var(--font-roboto);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu-item {
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+  color: #a1a1a1;
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+  background: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-menu-item:hover {
+  background-color: #343739;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    margin-top: 1rem;
+  }
+
+  .navbar-menu-item {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.App-logo {
+  width: 30%; /* Adjust the width as needed */
+  height: 30%; /* Adjust the height as needed */
+  animation: spin 30s infinite linear; /* Adjust the duration as needed */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
