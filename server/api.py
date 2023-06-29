@@ -37,7 +37,7 @@ def local():
         return jsonify({"message": "PUT not implemented"})
     
     if request.method == 'DELETE':
-        arg = delete_args.parse_args()
+        arg = ""
         if type(arg) != str or arg == "":
             return jsonify({"message": "Invalid ID Type"})
         resp = database.delete(arg)
