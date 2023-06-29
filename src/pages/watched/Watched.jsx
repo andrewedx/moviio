@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import MovieContainer from "../../components/MovieContainer";
 import searchIcon from "../../search.svg"
+import AtomicSpinner from 'atomic-spinner';
 
 
 const refData = []
@@ -71,6 +72,7 @@ const Watched = () => {
             </div>
 
             {error && <div>{error}</div>} 
+            {loading && <div><AtomicSpinner /></div>}
             {loading && <div>Loading...</div>}
             {movies && <MovieContainer movies={movies}/>}
     
