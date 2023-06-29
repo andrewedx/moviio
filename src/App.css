@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: auto;
 }
 
 h1 {
@@ -224,4 +225,30 @@ h1 {
     width: "100%";
     margin: 1rem;
   }
+}
+
+.add-button {
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  margin-top: 8px;
+  margin-left: 45%;
+  color: #4511e2;
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  letter-spacing: 0.75px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+.add-button:hover {
+  background: #3c3e40;
+  color: #ffffff;
+}
+
+.add-button:active {
+  background: #222222;
+  color: #ffffff;
 }

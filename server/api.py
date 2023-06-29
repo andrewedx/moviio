@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 from flask_restful import Api, reqparse
+from flask_cors import CORS
 import database
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 post_args = reqparse.RequestParser()

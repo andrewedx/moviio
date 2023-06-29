@@ -22,28 +22,79 @@ data = [
         "imdbID": "tt1877830",
         "Type": "movie",
         "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman",
+        "Year": "1989",
+        "imdbID": "tt0096895",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman Returns",
+        "Year": "1992",
+        "imdbID": "tt0103776",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman & Robin",
+        "Year": "1997",
+        "imdbID": "tt0118688",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman Forever",
+        "Year": "1995",
+        "imdbID": "tt0112462",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+        "Title": "The Lego Batman Movie",
+        "Year": "2017",
+        "imdbID": "tt4116284",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman: The Animated Series",
+        "Year": "1992–1995",
+        "imdbID": "tt0103359",
+        "Type": "series",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman v Superman: Dawn of Justice (Ultimate Edition)",
+        "Year": "2016",
+        "imdbID": "tt18689424",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOTRlNWQwM2ItNjkyZC00MGI3LThkYjktZmE5N2FlMzcyNTIyXkEyXkFqcGdeQXVyMTEyNzgwMDUw._V1_SX300.jpg"
     }
 ]
+
 
 resp = requests.get(BASE + 'local')
 print(resp.json())
 
 input("POST?")
 
-response = requests.post(BASE + 'local', data[0])
-print(response.json())
+for i in data:
+    response = requests.post(BASE + 'local', i)
+    print(response.json())
 
 input("GET?")
 
 response = requests.get(BASE + 'local')
 print(response.json())
 
-input("DELETE?")
-print(data[0]["imdbID"])
-response = requests.delete(BASE + 'local', params={"id": data[0]["imdbID"]})
-print(response.json())
+# input("DELETE?")
+# print(data[0]["imdbID"])
+# response = requests.delete(BASE + 'local', params={"id": data[0]["imdbID"]})
+# print(response.json())
 
-input("GET?")
+# input("GET?")
 
-response = requests.get(BASE + 'local')
-print(response.json())
+# response = requests.get(BASE + 'local')
+# print(response.json())
