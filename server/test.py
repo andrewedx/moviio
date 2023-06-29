@@ -30,12 +30,17 @@ print(resp.json())
 
 input("POST?")
 
-response = requests.post(BASE + 'local', data[1])
+response = requests.post(BASE + 'local', data[0])
+print(response.json())
+
+input("GET?")
+
+response = requests.get(BASE + 'local')
 print(response.json())
 
 input("DELETE?")
-
-response = requests.delete(BASE + 'local', params={"id":data[0]["imdbID"]})
+print(data[0]["imdbID"])
+response = requests.delete(BASE + 'local', params={"id": data[0]["imdbID"]})
 print(response.json())
 
 input("GET?")

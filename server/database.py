@@ -27,6 +27,7 @@ movies = [
     }
 ]
 
+
 def create_table():
     conn = sqlite3.connect(db)
     print("Open database successfull\nCreating table...")
@@ -53,8 +54,8 @@ def insert(movie):
             movie["Year"],
             movie["Type"],
             movie["Poster"]
-            )
-        
+        )
+
         conn = sqlite3.connect(db)
         conn.execute(f'''
             INSERT INTO MOVIES (
@@ -73,7 +74,7 @@ def insert(movie):
         conn.close()
         print("Movie inserted successfully\n")
         return "Movie inserted successfully"
-    
+
     except Exception as e:
         conn.close()
         print(e)
@@ -125,6 +126,7 @@ def delete(imdbID):
         conn.commit()
         conn.close()
         print("Movie deleted successfully\n")
+        return "Movie deleted successfully"
     except Exception as e:
         conn.close()
         print(e)
