@@ -72,10 +72,12 @@ def insert(movie):
         conn.commit()
         conn.close()
         print("Movie inserted successfully\n")
+        return "Movie inserted successfully"
     
     except Exception as e:
         conn.close()
-        print(e) 
+        print(e)
+        return e
 
 
 def select():
@@ -109,6 +111,7 @@ def select():
     except Exception as e:
         conn.close()
         print(e)
+        return e
 
 
 def delete(imdbID):
@@ -125,3 +128,4 @@ def delete(imdbID):
     except Exception as e:
         conn.close()
         print(e)
+        return e
